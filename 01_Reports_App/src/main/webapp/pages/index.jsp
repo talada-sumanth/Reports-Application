@@ -15,19 +15,21 @@
     <div class="container">
         <h3 class="pb-3 pt-3">Reports Application</h3>
 
-        <form:form action="" modelAttribute="search" method="POST">
+        <form:form action="search" modelAttribute="search" method="POST">
             <table>
                 <tr>
                     <td>Plan Name:</td>
                     <td>
                         <form:select path="planName" class="form-select">
                             <form:option value="">-select-</form:option>
+                            <form:options items = "${names}"/>
                         </form:select>
                     </td>
                     <td>Plan Status:</td>
                     <td>
                         <form:select path="planStatus" class="form-select">
                             <form:option value="">-select-</form:option>
+                        	<form:options items = "${status}"/>
                         </form:select>
                     </td>
                     <td>Gender:</td>
@@ -59,6 +61,19 @@
         </form:form>
         
         <hr>
+        
+        <table class = "table table-striped table-hover">
+        	<thead>
+        		<tr>
+        			<th>id</th>
+        			<th>holder name</th>
+        			<th>plan name</th>
+        			<th>plan status</th>
+        			<th>start date</th>
+        			<th>end date</th>
+        		</tr>
+        	</thead>
+        </table>
         
         <hr>
 

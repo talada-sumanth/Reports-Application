@@ -29,7 +29,7 @@ public class ReportServiceImpl implements ReportService {
 	@Override
 	public List<CitizenPlan> search(SearchRequest request) {
 
-		return null;
+		return planRepo.findAll();
 	}
 
 	@Override
